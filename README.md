@@ -1,6 +1,6 @@
-# Data Science Project
+# Data Science 
 
-Welcome to the Data Science project repository! This repository contains various experiments and analyses utilizing different datasets related to advertising, stock market returns, and college data. Below, you will find an overview of the directory structure and a list of experiments conducted.
+Welcome to the Data Science repository! This repository contains various experiments and analyses utilizing different datasets related to advertising, super market returns, and college data. Below, you will find an overview of the directory structure and a list of experiments conducted.
 
 ## List of Experiments
 
