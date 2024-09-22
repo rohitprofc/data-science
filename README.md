@@ -1,103 +1,45 @@
-# Data Science Experiments - README
+# Data Science Project
 
-## Project Overview
+Welcome to the Data Science project repository! This repository contains various experiments and analyses utilizing different datasets related to advertising, stock market returns, and college data. Below, you will find an overview of the directory structure and a list of experiments conducted.
 
-This repository contains a series of experiments and implementations related to data science tasks using various datasets. The experiments focus on different machine learning models, statistical methods, and data analysis techniques. The structure and flow of the experiments are designed to provide hands-on experience in exploring and analyzing datasets through real-world tasks.
+## List of Experiments
 
-### Datasets Used
+### Advertising Data Analysis
+The **Advertising data** contains sales (in thousands of units) for a product as a function of advertising budgets (in thousands of dollars) across TV, radio, and newspaper media.
 
-- **`advertising.csv`**: Contains advertising budgets (TV, radio, newspaper) and the corresponding sales (in thousands of units).
-- **`collegedata.csv`**: Information about 777 universities/colleges in the US with various attributes (quantitative and categorical).
-- **`smarket.csv`**: Daily percentage returns for S&P 500 over a 5-year period, including lag variables and trading volume.
+1. **Least Squares Regression**: Apply a least squares model to regress the number of units sold on the TV advertising budget for coefficient estimates in simple linear regression.
+2. **Statistical Metrics**: Compute t-statistic, residual standard error, F-statistic, and residual sum of squares (RSS) errors.
 
-### Experiments
+### Stock Market Analysis
+Using the **Smart data** of daily percentage returns for the S&P 500 over a 5-year period:
 
-Below is a brief description of the experiments available in the repository:
+3. **KNN Analysis**: Perform KNN with K = 3, using `Direction` as the response and the five lag variables plus `Volume` as predictors. Determine which predictors are statistically significant.
+4. **Confusion Matrix**: Compute the confusion matrix and the overall fraction of correct predictions. Explain the insights gained from the confusion matrix regarding KNN's mistakes.
+5. **Model Evaluation Metrics**: Compute Mallow’s Cp, Akaike Information Criterion (AIC), Adjusted R-Squared, and Bayesian Information Criterion (BIC).
 
-#### 1. **Simple Linear Regression on Advertising Data**
-   - **File**: `Exp_1.ipynb`
-   - This experiment applies a **least squares model** to estimate the number of units sold based on the TV advertising budget. The regression provides the coefficient estimates for a simple linear model.
+### College Data Exploration
+The **College dataset** contains various variables for 777 universities and colleges in the US.
 
-#### 2. **Statistical Measures for the Least Squares Model**
-   - **File**: `Exp_2.ipynb`
-   - Computes key statistical metrics: **t-statistic, Residual Standard Error (RSE), F-statistic**, and **Residual Sum of Squares (RSS)** for the simple linear regression model of Experiment 1.
+6. **Histograms**: Produce histograms with varying numbers of bins for several quantitative variables.
+7. **Data Summary**: Explore the data further and provide a brief summary of findings.
+8. **Correlation Analysis**: Perform Pearson product moment correlation, Spearman rho correlation, and Kendall’s tau.
+9. **Hypothesis Testing**: Conduct simple hypothesis testing, including student’s t-test, paired t-test, U test, correlation, covariance, and tests for association.
+10. **Eigenvalues and Eigenvectors**: Implement programming for computing eigenvalues and eigenvectors.
+11. **Matrix Decomposition**: Perform QR decomposition, Singular Value Decomposition (SVD), and Principal Component Analysis (PCA).
+12. **SVM Analysis**: Compute the discriminating hyperplane using Support Vector Machines (SVM) for specified objects.
 
-#### 3. **K-Nearest Neighbors (KNN) on S&P 500 Data**
-   - **File**: `Exp_3.ipynb`
-   - Uses **K-Nearest Neighbors (K = 3)** with `Direction` as the response variable and the lag variables along with volume as predictors. The aim is to identify statistically significant predictors.
+## Getting Started
 
-#### 4. **Confusion Matrix and Model Evaluation (KNN)**
-   - **File**: `Exp_4.ipynb`
-   - Constructs a **confusion matrix** to evaluate the KNN model's prediction performance and compute the overall accuracy. Analyzes the types of errors made by the model.
+To run the experiments, ensure you have the necessary packages installed. You can find the required packages listed in `requirements.txt`. To set up the environment, use:
 
-#### 5. **Model Selection and Information Criteria**
-   - **File**: `Exp_5.ipynb`
-   - Calculates **Mallow’s Cp, Akaike Information Criterion (AIC), Adjusted R²**, and **Bayesian Information Criterion (BIC)** for model evaluation and selection.
+```bash
+pip install -r requirements.txt
+```
 
-#### 6. **Exploratory Data Analysis on College Data**
-   - **File**: `Exp_6.ipynb`
-   - Performs **exploratory data analysis (EDA)** on the `collegedata.csv` dataset by generating histograms with varying bin sizes for different quantitative variables.
+## Contributions
 
-#### 7. **College Data Summary and Insights**
-   - **File**: `Exp_7.ipynb`
-   - Continues the analysis from Experiment 6 by summarizing key findings and patterns observed from the `collegedata.csv` dataset.
+Feel free to contribute to this project by adding new experiments or improving existing analyses. For any questions or suggestions, please open an issue.
 
-#### 8. **Correlation Analysis on College Data**
-   - **File**: `Exp_8.ipynb`
-   - Computes **Pearson, Spearman’s rho**, and **Kendall’s tau** correlation coefficients for different pairs of quantitative variables from the `collegedata.csv` dataset.
+## License
 
-#### 9. **Hypothesis Testing**
-   - **File**: `Exp_9.ipynb`
-   - Conducts various hypothesis tests: **Student’s t-test, paired t-test, U-test**, and tests for **correlation** and **covariance** to assess relationships between variables in the `collegedata.csv` dataset.
-
-#### 10. **Eigenvalues and Eigenvectors Computation**
-   - **File**: `Exp_10.ipynb`
-   - Demonstrates programming to compute **Eigenvalues and Eigenvectors** for matrix decomposition and analysis.
-
-#### 11. **QR Decomposition, SVD, and PCA**
-   - **File**: `Exp_11.ipynb`
-   - Implements **QR decomposition, Singular Value Decomposition (SVD)**, and **Principal Component Analysis (PCA)** to perform dimensionality reduction and matrix factorizations.
-
-#### 12. **Support Vector Machine (SVM) Classification**
-   - **File**: `Exp_12.ipynb`
-   - Computes the discriminating **hyperplane using Support Vector Machine (SVM)** for a set of objects in a 2D space with binary classification labels (+1, -1).
-
-### Setup Instructions
-
-1. **Clone the Repository**
-   ```bash
-   git clone <repository-url>
-   cd data-science
-   ```
-
-2. **Install Dependencies**
-   You may need the following Python packages:
-   ```bash
-   pip install numpy pandas scikit-learn matplotlib seaborn
-   ```
-
-3. **Running Jupyter Notebooks**
-   Launch Jupyter Notebook to explore the experiments:
-   ```bash
-   jupyter notebook
-   ```
-
-4. **Datasets**
-   The datasets are located in the `dataset/` folder. The required datasets for each experiment are loaded within the corresponding Jupyter notebooks.
-
-### Additional Files
-
-- **`create_multiple_files.py`**: This script is a utility to generate multiple files dynamically.
-- **Other Notebooks**: `advertising.ipynb`, `weather.ipynb` located in the `other/` directory provide additional examples of analyses on `advertising.csv` and `weather.csv` datasets.
-
-### License
-
-This project is open-source and available under the MIT License.
-
-### Contact
-
-For any issues, feel free to open a GitHub issue or reach out to the project maintainer.
-
----
-
-This README file provides a comprehensive overview of the structure and purpose of the repository along with detailed explanations of each experiment.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
